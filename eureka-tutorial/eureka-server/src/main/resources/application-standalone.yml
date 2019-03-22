@@ -6,6 +6,7 @@ eureka:
     hostname: localhost
   server:
     wait-time-in-ms-when-sync-empty: 0
+    # 自我保护（网络大面积抖动，导致收到的续约次数小于阀值时，关闭租约失效剔除，保护实例的注册信息）开关，开发测试环境可以关闭，生产环境需要打开
     enable-self-preservation: false
   client:
     register-with-eureka: false

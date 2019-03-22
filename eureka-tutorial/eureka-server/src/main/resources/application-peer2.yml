@@ -1,0 +1,17 @@
+# eureka server peer2 config
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: eureka-server-02.sagesource.com
+  client:
+    # 表示是否注册自身到eureka服务器
+    #register-with-eureka: true
+    # 是否从eureka上获取注册信息
+    #fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    # 自我保护（网络大面积抖动，导致收到的续约次数小于阀值时，关闭租约失效剔除，保护实例的注册信息）开关，开发测试环境可以关闭，生产环境需要打开
+    enable-self-preservation: false

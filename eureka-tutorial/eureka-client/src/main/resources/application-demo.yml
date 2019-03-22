@@ -7,5 +7,6 @@ spring:
 
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    service-url:
+      # 高可用 必须把集群的地址全部配置好
+      defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
