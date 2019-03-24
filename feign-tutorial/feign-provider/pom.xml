@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>feign-client</artifactId>
+    <artifactId>feign-provider</artifactId>
 
     <dependencies>
         <!-- 引入 eureka client -->
@@ -17,17 +17,8 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!-- Spring Cloud OpenFeign的Starter的依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!-- okhttp -->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-okhttp</artifactId>
-        </dependency>
 
+        <!-- 引入api -->
         <dependency>
             <groupId>io.sagesource</groupId>
             <artifactId>feign-serivce-api</artifactId>

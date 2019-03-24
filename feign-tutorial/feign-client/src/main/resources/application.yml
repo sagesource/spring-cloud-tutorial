@@ -1,8 +1,14 @@
 server:
-  port: 8010
+  port: 8011
 spring:
   application:
     name: feign-client
+
+# eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
 
 # 日志配置
 logging:
@@ -10,15 +16,6 @@ logging:
     io.sagesource.springcloud.tutorial.feign.client.service.GithubFeignService: debug
 
 ## feign 配置
-#feign:
-#  compression:
-#    request:
-#      enabled: true
-#      mime-types: text/xml,application/xml,application/json # 配置压缩支持的MIME TYPE
-#      min-request-size: 2048  # 设置触发压缩的大小下限
-#    response:
-#      enabled: true # 配置响应GZIP压缩
-
 # 启动okhttp
 feign:
   httpclient:

@@ -13,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * </pre>
  */
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"io.sagesource"})
 public class FeignClientApplication {
 
 	public static void main(String[] args) {
