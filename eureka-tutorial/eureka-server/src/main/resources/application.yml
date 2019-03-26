@@ -7,11 +7,6 @@ spring:
   application:
     name: EUREKA-SERVER
 
-eureka:
-  server:
-    use-read-only-response-cache: false
-    response-cache-auto-expiration-in-seconds: 10
-
 management:
   endpoints:
     web:

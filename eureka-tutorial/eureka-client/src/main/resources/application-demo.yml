@@ -3,10 +3,12 @@ server:
 
 spring:
   application:
-    name: demo-client1
+    name: demo-client
 
 eureka:
   client:
     service-url:
       # 高可用 必须把集群的地址全部配置好
       defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
+    # 适当提高拉取server信息的频率
+    registry-fetch-interval-seconds: 5

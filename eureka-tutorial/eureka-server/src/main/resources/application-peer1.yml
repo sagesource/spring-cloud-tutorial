@@ -12,6 +12,11 @@ eureka:
     service-url:
       defaultZone: http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
   server:
+    # 在Eureka服务器获取不到集群里对等服务器上的实例时，需要等待的时间，单位为毫秒
     wait-time-in-ms-when-sync-empty: 0
-    # 自我保护（网络大面积抖动，导致收到的续约次数小于阀值时，关闭租约失效剔除，保护实例的注册信息）开关，开发测试环境可以关闭，生产环境需要打开
-    enable-self-preservation: false
+    # 针对client下线但是没有通知到eureka server的问题，调整定时任务频率为5s
+    eviction-interval-timer-in-ms: 5000
+    # 关闭 eureka server 一级缓存
+    use-read-only-response-cache: false
+    # 修改 eureka server 二级guava缓存的失效时间
+    response-cache-auto-expiration-in-seconds: 10

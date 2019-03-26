@@ -9,7 +9,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
-
+    # 适当提高拉取server信息的频率
+    registry-fetch-interval-seconds: 5
+    
 # 日志配置
 logging:
   level:
