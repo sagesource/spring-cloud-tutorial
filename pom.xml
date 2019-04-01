@@ -12,6 +12,7 @@
     <modules>
         <module>eureka-tutorial</module>
         <module>feign-tutorial</module>
+        <module>hystrix-tutorial</module>
     </modules>
 
     <properties>
