@@ -1,10 +1,8 @@
-package io.sagesource.springcloud.tutorial.hystrix.consumer;
+package io.sagesource.springcloud.tutorial.hystrix.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * <p></p>
@@ -15,13 +13,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * </pre>
  */
 @SpringBootApplication
-@EnableHystrix
 @EnableDiscoveryClient
-@EnableFeignClients
-public class HystrixConsumerApplication {
+public class HystrixProviderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HystrixConsumerApplication.class, args);
+		SpringApplication.run(HystrixProviderApplication.class, args);
 	}
 
 }
