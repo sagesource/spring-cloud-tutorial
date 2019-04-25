@@ -1,8 +1,8 @@
 server:
-  port: 8013
+  port: 8015
 spring:
   application:
-    name: hystrix-consumer-service
+    name: hystrix-dashboard
 
 # eureka
 eureka:
@@ -11,17 +11,6 @@ eureka:
       defaultZone: http://eureka-server-01.sagesource.com:8761/eureka/,http://eureka-server-02.sagesource.com:8762/eureka/,http://eureka-server-03.sagesource.com:8763/eureka/
     # 适当提高拉取server信息的频率
     registry-fetch-interval-seconds: 5
-
-## feign 配置
-# 启动okhttp
-feign:
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
-  # 启动hystrix支持
-  hystrix:
-    enabled: true
 
 # 添加监控点，便于hystrix dashboard 获取状态
 management:

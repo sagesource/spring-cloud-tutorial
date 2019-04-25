@@ -14,6 +14,7 @@
     <modules>
         <module>hystrix-provider-service</module>
         <module>hystrix-consumer-service</module>
+        <module>hystrix-dashboard</module>
     </modules>
 
 

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  *     email       job.xueqi@outlook.com
  * </pre>
  */
-@Component
+@Component("HystrixProviderClientFallback")
 public class HystrixProviderClientFallback implements HystrixProviderClient {
 	@Override
 	public String getProviderUser(String username) {
